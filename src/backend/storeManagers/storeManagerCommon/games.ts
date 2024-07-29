@@ -254,7 +254,7 @@ export async function launchGame(
     }
 
     logInfo(
-      `launching non-native sideloaded: ${executable}}`,
+      `launching non-native sideloaded: ${executable} ${launcherArgs ?? ''}}`,
       LogPrefix.Backend
     )
 
