@@ -151,7 +151,8 @@ export interface GameInfo {
   gog_save_location?: GOGCloudSavesLocation[]
   title: string
   canRunOffline: boolean
-  thirdPartyManagedApp?: string | undefined
+  thirdPartyManagedApp?: string
+  isEAManaged?: boolean
   is_mac_native?: boolean
   is_linux_native?: boolean
   browserUrl?: string
@@ -683,6 +684,7 @@ export type Type =
   | 'Wine-Kron4ek'
   | 'Wine-Crossover'
   | 'Wine-Staging-macOS'
+  | 'Game-Porting-Toolkit'
 
 /**
  * Interface contains information about a version
@@ -712,7 +714,8 @@ export enum Repositorys {
   PROTON,
   WINELUTRIS,
   WINECROSSOVER,
-  WINESTAGINGMACOS
+  WINESTAGINGMACOS,
+  GPTK
 }
 
 export type WineManagerStatus =
